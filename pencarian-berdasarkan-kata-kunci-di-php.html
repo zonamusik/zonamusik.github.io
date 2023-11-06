@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pencarian Berdasarkan Kata Kunci Di Php - BELAJAR</title>
+    <meta name="description" content="Pencarian Berdasarkan Kata Kunci Di Php, , , , , , , 0, , , , , , 0, pencarian-berdasarkan-kata-kunci-di-php, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pencarian Berdasarkan Kata Kunci Di Php - BELAJAR" />
+    <meta property="og:description" content="Pencarian Berdasarkan Kata Kunci Di Php, , , , , , , 0, , , , , , 0, pencarian-berdasarkan-kata-kunci-di-php, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pencarian Berdasarkan Kata Kunci Di Php - BELAJAR" />
+    <meta name="twitter:description" content="Pencarian Berdasarkan Kata Kunci Di Php, , , , , , , 0, , , , , , 0, pencarian-berdasarkan-kata-kunci-di-php, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://zonamusik.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://zonamusik.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://zonamusik.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://zonamusik.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://zonamusik.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://zonamusik.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://zonamusik.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://zonamusik.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://zonamusik.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://zonamusik.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Pencarian Berdasarkan Kata Kunci Di Php</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">Hendriksaragihh</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Pencarian+Berdasarkan+Kata+Kunci+Di+Php" alt="Pencarian Berdasarkan Kata Kunci Di Php">
+                    </div>
+                    <p></p>
+                    <p>cari pemrograman apa saja yang bergubungan dengan php​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cari-pemrograman-apa-saja-yang-bergubungan-dengan-php%e2%80%8b">1.
+                                            cari pemrograman apa saja yang bergubungan dengan php​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#php-dapat-dijalankan-diberbagai-sistem-operasi-dengan-kata-lain-php-bersifat-%e2%80%8b">2.
+                                            PHP dapat dijalankan diberbagai sistem operasi.Dengan kata lain PHP bersifat ....*​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-macam-macam-perintah-dasar-php%e2%80%8b">3.
+                                            Jelaskan macam-macam Perintah dasar PHP​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-kepanjangan-php">4.
+                                            apa kepanjangan PHP?..</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cari-teks-cerita-sejarah-kemudian-tentukan-struktur-dan-kaidah-kebahasaanya-php-menjauh">5.
+                                            Cari teks cerita sejarah kemudian tentukan struktur dan kaidah kebahasaanya . Php menjauh</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cara-mencari-perulangan-php-dengan-for-1371531631272555111-0232-0474-0958-191">6.
+                                            cara mencari perulangan php dengan FOR 1,3,7,15,31,63,127,255,511,1.023,2.047,4.095,8.191</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sedangkan-bahasa-pemrograman-php-didasarkan-pada-paradigma-object-oriented-programming-oop-adalah-pengertian-dari-apa">7.
+                                            Sedangkan "bahasa pemrograman PHP didasarkan pada paradigma Object Oriented Programming (OOP)" adalah pengertian dari apa?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-script-php-dan-sql-untuk-menampilkan-data-dari-sebuah-form-pencarian">8.
+                                            Tuliskan script PHP dan SQL untuk menampilkan data dari sebuah form pencarian?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-rumus-function-untuk-mencari-beberapa-nilai-maksimum-pada-program-php">9.
+                                            Bagaimana rumus function untuk mencari beberapa nilai maksimum pada program PHP?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">10.
+                                            apa yang dimaksud dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#quiz-malampertanyaan-nya-ada-di-atas-yanote-dasar-lelaki-tukang-php-in-anak-orang-%e2%80%8b">11.
+                                            QUIZ MALAMPERTANYAAN NYA ADA DI ATAS YANOTE : DASAR LELAKI TUKANG PHP IN ANAK ORANG ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#penjumlahan-pada-php-kolom-database-dengan-php">12.
+                                            penjumlahan pada php kolom database dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tolong-bantu-cari-donk-pliss-mendadak-jgn-php-ya-saya-sngt-butuh-bantuan-tolong-bagu-ilmu-ya-%e2%80%8b">13.
+                                            tolong bantu cari donk pliss mendadak..jgn PHP ya..saya sngt butuh bantuan tolong bagu ilmu ya...​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apakah-kepanjangan-dari-kata-php-dalam-ilmu-matematika">14.
+                                            apakah kepanjangan dari kata PHP dalam ilmu matematika?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-syntax-php-untuk-menghapus-data-siswa-berdasarkan-id-siswa%e2%80%8b">15.
+                                            Tuliskan syntax Php untuk menghapus data siswa berdasarkan ID siswa​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-cari-dan-rangkum-membuat-database-di-php2-jelaskan-tentang-desain-web-berbasis-sqltolong-bantu-besok-di-kumpulin">16.
+                                            1. cari dan rangkum membuat database di php2. jelaskan tentang desain web berbasis SQLTolong bantu besok di kumpulin</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagamana-cara-membuat-php-dan-apa-fungsi-php">17.
+                                            bagamana cara membuat php dan apa fungsi php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pada-dasarnya-php-yang-baru-saja-diinstall-dengan-masuk-ke-folder">18.
+                                            pada dasarnya, php yang baru saja diinstall dengan masuk ke folder?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">19.
+                                            apa yang dimaksud dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-ada-berapa-versi-php2-apakah-php-adalah-sebuah-bahasa-pemrograman-oop-jelaskan-pendapat-kalian">20.
+                                            1. Ada berapa versi PHP?
+2. Apakah PHP adalah sebuah bahasa pemrograman OOP? Jelaskan pendapat kalian.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cari-keunggulankelebihan-html-dan-php-masing-masing-10">21.
+                                            cari keunggulan/kelebihan html dan php masing masing 10</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#kepanjangan-kata-php">22.
+                                            kepanjangan kata php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-php-mysql-dengan-php-mysqli">23.
+                                            apa perbedaan php mysql dengan php mysqli ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#server-sidescriptingteks-editorweb-broserwebserverjikaphpphpbahasafort-fert-server-sidejelaskan-kebutuhan-untukberdasarkangambar-diacarmelakukon-permogramanscripting-adalah%e2%80%8b">24.
+                                            Server SideScriptingTeks EditorWeb BroserwebServerJikaPHPphpBahasafort fert Server sideJelaskan kebutuhan untukberdasarkangambar diacarmelakukon permogramanScripting adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-itu-_request-pada-php">25.
+                                            apa itu $_REQUEST pada php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#kelebihan-php-apa-saja">26.
+                                            kelebihan php apa saja???</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-script-php-pencarian-data-ini-select-from-siswa-where-nama-like-_post-txtnama">27.
+                                            Jelaskan Script php pencarian data ini (  select * from siswa where nama like %$_POST ['txtnama']  %</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">28.
+                                            Apa yang dimaksud dengan php?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gimana-caranya-instal-php-di-komputer-katanya-harus-pakai-xampp-ya">29.
+                                            gimana caranya instal php di komputer? katanya harus pakai xampp ya?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-fungi-dari-tipe-data-array-dan-buat-bentuk-dasar-dari-array-pada-program-php">30.
+                                            Jelaskan fungi dari tipe data array dan buat bentuk dasar dari array pada program php </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cara-membuat-form-php-absensi-yang-kalau-lebih-cari-jam-tertentu-tidak-bisa-di-isi-lagi%e2%80%8b">31.
+                                            cara membuat form php absensi yang kalau lebih cari jam tertentu tidak bisa di isi lagi​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pada-dasarnya-php-yang-baru-saja-diinstall-dengan-masuk-ke-folder%e2%80%a6">32.
+                                            Pada dasarnya, PHP yang baru saja diinstall dengan masuk ke folder…</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-kepanjangan-dari-php">33.
+                                            Apa kepanjangan dari php </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">34.
+                                            apa yang dimaksud dengan php?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#saya-ada-tugas-buat-web-dari-php-tolong-bantu-saya-mengerjakan-tugas-saya-saya-sudah-cari-digoogle-tapi-gak-ketemu-tolong-bantuannya">35.
+                                            saya ada tugas buat web dari php. Tolong bantu saya mengerjakan tugas saya.saya sudah cari digoogle tapi gak ketemu. tolong bantuannya</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">36.
+                                            apa yang dimaksud dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-itu-php-dan-apa-kegunaan-php">37.
+                                            apa itu PHP ? 
+dan apa kegunaan PHP ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cari-keunggulankelebihan-html-dan-php-masing-masing-10">38.
+                                            cari keunggulan/kelebihan html dan php masing masing 10</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-pengertian-dari-php-dalam-pembahasan-pemrograman-dasar%e2%80%8b">39.
+                                            Apa pengertian dari PHP dalam pembahasan pemrograman dasar​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#php-adalah-singkatan-dari">40.
+                                            PHP adalah singkatan dari</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="cari-pemrograman-apa-saja-yang-bergubungan-dengan-php%e2%80%8b">
+                            1. cari pemrograman apa saja yang bergubungan dengan php​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>program XAMPP  untuk database</p><p>Notepad++</p><p>program dreamweaver</p><p><strong>Penjelasan:</strong></p><p>cukup untuk membuat suatu aplikasi website</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="php-dapat-dijalankan-diberbagai-sistem-operasi-dengan-kata-lain-php-bersifat-%e2%80%8b">
+                            2. PHP dapat dijalankan diberbagai sistem operasi.Dengan kata lain PHP bersifat ....*​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>PHP bersifat Open Source yang berarti dapat digunakan oleh siapa saja secara gratis. ... Program yang dibuat dengan PHP bisa dijalankan oleh Semua Sistem Operasi karena PHP berjalan secara Web Base yag artinya semua Sistem Operasi bahkan HP yang mempunyai Web Browser dapat menggunakan program PHP.</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-macam-macam-perintah-dasar-php%e2%80%8b">
+                            3. Jelaskan macam-macam Perintah dasar PHP​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Berikut struktur dasar kode PHP :</p><p></p><p>&lt;?php</p><p></p><p>Script php</p><p></p><p>?&gt;</p><p></p><p></p><p>Atau dapat juga ditulis :</p><p></p><p></p><p>&lt;?</p><p></p><p>Script PHP</p><p></p><p>?&gt;</p><p></p><p></p><p>Kode PHP dapat digabungkan dengan HTML seperti pada contoh berikut ini :</p><p></p><p></p><p>&lt;html&gt;</p><p></p><p> &lt;body&gt;</p><p></p><p>  &lt;?php</p><p></p><p>   Echo  "ini adalah PHP";</p><p></p><p>  ?&gt;</p><p></p><p> &lt;/body&gt;</p><p></p><p>&lt;/html&gt;</p><p></p><p></p><p></p><p>2. /*…*/</p><p></p><p>Mendefinisikan komentar pada PHP. Tulisan yang berada dalam kode ini tidak akan diakses oleh webserver.</p><p></p><p>Contoh:</p><p></p><p>&lt;?php</p><p></p><p>/* ini merupakan contoh komentar */</p><p></p><p>Echo "ini adalah PHP";</p><p></p><p>?&gt;</p><p></p><p></p><p>3. Variabel</p><p></p><p>Penulisan variabel dalam PHP diawali dengan symbol $.</p><p></p><p>Syntax dasar</p><p></p><p>$nama_variabel = value;</p><p></p><p></p><p>Contohnya:</p><p></p><p>&lt;?php</p><p></p><p>$teks="ini adalah PHP!";</p><p></p><p>$angka=10;</p><p></p><p>?&gt;</p><p></p><p></p><p>4. if…else</p><p></p><p>Merupakan statement kondisi yang digunakan untuk menentukan aksi yang akan dilakukan pada kondisi tertentu. PHP memiliki 4 jenis statemen kondisi, yaitu :</p><p></p><p>If – digunakan untuk menjalankan kode-kode berikutnya hanya jika kondisi bernilai benar (true).</p><p></p><p>Syntax dasar</p><p></p><p>If (condition) kode yang akan dijalankan ketika kondisi bernilai benar;</p><p></p><p></p><p>Contoh:</p><p></p><p></p><p>&lt;?php</p><p></p><p>$t=date("T");</p><p></p><p>If ($t=="Sabtu") ;</p><p></p><p>Echo "Selamat Liburan broo..";</p><p></p><p>?&gt;</p><p></p><p></p><p>If…else – digunakan untuk menjalankan kode-kode berikutnya jika kondisi bernilai benar (true) dan akan menjalankan kode-kode yang lain jika kondisi bernilai salah (false).</p><p></p><p>Syntax dasar:</p><p></p><p>If (condition) kode yang akan dijalankan ketika kondisi bernilai benar;</p><p></p><p>Else</p><p></p><p>Kode yang akan dijalankan ketika kondisi bernilai salah;</p><p></p><p></p><p>Contoh:</p><p></p><p>&lt;?php</p><p></p><p>$t=date("T");</p><p></p><p>If ($t=="Sabtu")</p><p></p><p>Echo "Selamat Liburan broo..";</p><p></p><p>Else</p><p></p><p>Echo "Hari yang cerah sekali";</p><p></p><p>?&gt;</p><p></p><p></p><p>If..else – digunakan untuk memilih salah satu dari beberapa blok kode yang akan dijalankan.</p><p></p><p>Syntax dasar:</p><p></p><p>If (condition) kode yang akan dijalankan ketika kondisi bernilai benar;</p><p></p><p>Elseif (condition) kode yang akan dijalankan ketika kondisi berikutnya bernilai benar;</p><p></p><p>Else</p><p></p><p>Kode yang akan dijalankan ketika kondisi benilai slaah;</p><p></p><p></p><p>Contoh:</p><p></p><p>&lt;?php</p><p></p><p>$t=date("T");</p><p></p><p>If ($t=="Sabtu");</p><p></p><p>  Else "Selamat liburan coyy..";</p><p></p><p>Elseif ($t=="Senin");</p><p></p><p>Echo "Senin Ceria";</p><p></p><p>Else</p><p></p><p>Echo "Hari yang menyenangkan";</p><p></p><p>?&gt;</p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-kepanjangan-php">
+                            4. apa kepanjangan PHP?..</h2><br />
+                        Pemberi Harapan Palsu<br /><br />....pemberi harapan palsu<br />
+                                            <h2 class="ez-toc-section" id="cari-teks-cerita-sejarah-kemudian-tentukan-struktur-dan-kaidah-kebahasaanya-php-menjauh">
+                            5. Cari teks cerita sejarah kemudian tentukan struktur dan kaidah kebahasaanya . Php menjauh</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Pengertian teks cerita sejarah Teks cerita sejarah adalah teks yang memuat penjelasan peristiwa di masa lalu. Teks cerita sejarah biasanya menceritakan: Peristiwa bersejarah yang memiliki dampak besar Latar belakang terjadinya peristiwa besar Asal-usul hal yang memiliki nilai sejarah Perkembangan sejarah suatu hal
+</p><p>
+</p><p>maaf kalo salah:)</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="cara-mencari-perulangan-php-dengan-for-1371531631272555111-0232-0474-0958-191">
+                            6. cara mencari perulangan php dengan FOR 1,3,7,15,31,63,127,255,511,1.023,2.047,4.095,8.191</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>seribu 2300 lu itung lgi pake calculator gakak</p><br />
+                                            <h2 class="ez-toc-section" id="sedangkan-bahasa-pemrograman-php-didasarkan-pada-paradigma-object-oriented-programming-oop-adalah-pengertian-dari-apa">
+                            7. Sedangkan "bahasa pemrograman PHP didasarkan pada paradigma Object Oriented Programming (OOP)" adalah pengertian dari apa?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Pengertian tersebut adalah sebuah pernyataan atau fakta tentang bahasa pemrograman PHP dan paradigma pemrograman yang digunakannya, yaitu paradigma Object Oriented Programming (OOP).</p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-script-php-dan-sql-untuk-menampilkan-data-dari-sebuah-form-pencarian">
+                            8. Tuliskan script PHP dan SQL untuk menampilkan data dari sebuah form pencarian?</h2><br />
+                        <p>Membuat form pencarian</p>Ketikkan script berikut<br />,&lt;html&gt;<br /> &lt;head&gt;<br /> &lt;title&gt; Halaman Pencarian &lt;/title&gt;<br /> &lt;/head&gt;
+<br />&lt;body&gt;<br /> &lt;form name="formcari" method="post" action="search_exe.php"&gt;<br /> &lt;table width="330" border="0" align="center" cellpadding="0"&gt;
+<br />&lt;tr bgcolor="orange"&gt;
+<br />&lt;td height="25" colspan="3"&gt;
+<br />&lt;strong&gt; Student Searching ! &lt;/strong&gt;
+<br />&lt;/td&gt;<br /> &lt;/tr&gt;<br /> &lt;tr&gt;<br /> &lt;td&gt;Name &lt;/td&gt;<br />&lt;td&gt; &lt;input type="text" name="name"&gt; &lt;/td&gt;<br /> &lt;/tr&gt;<br /> &lt;td&gt;&lt;/td&gt;
+<br />&lt;td&gt;&lt;input type="SUBMIT" name="SUBMIT" id="SUBMIT" value="search&lt;/td&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+simpan dengan nama formsearching.phpPenjelasan : script diatas adalah HTML script biasa yang akan menampilkan form. Perhatian bagian action="search_exe.php", bagian ini dimaksudkan bahwa form akan diproses oleh script search_exe.php<br />
+                                            <h2 class="ez-toc-section" id="bagaimana-rumus-function-untuk-mencari-beberapa-nilai-maksimum-pada-program-php">
+                            9. Bagaimana rumus function untuk mencari beberapa nilai maksimum pada program PHP?</h2><br />
+                        Menggunakan fungsi max().<br /><br />Contoh:<br />&lt;?php<br />echo(max(20,10,19,21) . "&lt;br&gt;"); <br />echo(max(array(19,12,13,14)) . "&lt;br&gt;");<br /><br />?&gt;<br /><br />Output:<br />21<br />19<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            10. apa yang dimaksud dengan php</h2><br />
+                        php adalah suatu bahasa pemrogaman yang berbasis web<br />sngkatan dari Pheripheral Hypertext Preprocessor,, suatu bahasa pmrograman yg dpat disisipkan kdlam HTML, (brbsis web)<br /><br />
+                                            <h2 class="ez-toc-section" id="quiz-malampertanyaan-nya-ada-di-atas-yanote-dasar-lelaki-tukang-php-in-anak-orang-%e2%80%8b">
+                            11. QUIZ MALAMPERTANYAAN NYA ADA DI ATAS YANOTE : DASAR LELAKI TUKANG PHP IN ANAK ORANG ​</h2><br />
+                        <p><strong>Jawaban:</strong></p>[tex]Soal[/tex]<p></p><p></p><p></p><p>1. 8.450 - 6.250 + 3.449 = ...</p><p>2. 5.885 + 3.820 - 6.115 = ...</p><p>3. 6.666 - ( 2.222 + 3.333 ) = ...</p><p>4. 1.250 + 7.095 - 5.487 = ...</p><p>5. 10.000 - ( 4.283 + 3.127 ) = ...</p><p>6. 6.386 - 4.225 + 6.188 = ...</p><p>7. 8.765 - 5.678 + 4.321 = ...</p><p>8. 8.509 + ( 5.500 - 3.750 ) = ...</p><p>9. 7.250 - 4.800 + ( 3.500 - 1.750 ) = ...</p><p>10. 7.600 - ( 4.357 + 2.155 ) + 1.250 = ...</p><p></p><p></p><p></p>[tex]Jawab[/tex]<p></p><p></p><p></p><p></p><p>1. 8.450 - 6.250 + 3.449 = 8.450 - 6.250 = 2.200 + 3.449 = 5.649</p><p></p><p>2. 5.885 + 3.820 - 6.115 = 5.885 + 3.820 = 9.705 - 6.115 = 3.590</p><p></p><p>3. 6.666 - ( 2.222 + 3.333 ) = 2.222 + 3.333 = 5.555 = 6.666 - 5.555 = 1.111</p><p></p><p>4. 1.250 + 7.095 - 5.487 = 1.250 + 7.095 = 8.345 - 5.487 = 2.858</p><p></p><p>5. 10.000 - ( 4.283 + 3.127 ) = 4.283 + 3.127 = 7.410 = 10.000 - 7.410 = 2.590</p><p></p><p>6. 6.386 - 4.225 + 6.188 = 6.386 - 4.225 = 2.161 + 6.188 = 8.349</p><p></p><p>7. 8.765 - 5.678 + 4.321 = 8.765 - 5.678 = 3.087 + 4.321 = 7.408</p><p></p><p>8. 8.509 + ( 5.500 - 3.750 ) = 5.500 - 3.750 = 1.750 + 8.509 = 10.259</p><p></p><p>9. 7.250 - 4.800 + ( 3.500 - 1.750 ) = 3.500 - 1.750 = 1.750 = 7.250 - 4.800 = 2.450 + 1.750 = 4.200</p><p></p><p>10. 7.600 - ( 4.357 + 2.155 ) + 1.250 = 4.357 + 2.155 = 6.512 = 7.600 - 6.512 = 1.088 + 1.250 = 2.338</p><p>• Answer By @blqzzz01 [brainly]</p><p>• Hari/Tgl: Jum'at, 10 September 2021</p><p>• Mapel: Matematika</p><p></p><p>Jwaban dan Cara Sudah Tertera Pada Foto Yya!</p><p></p><p></p><p>#LearnWithBrainly</p><p>#KasihBestAnswerYya!</p><p>~Fllw Ig: @xblqqs</p><p></p><p></p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="penjumlahan-pada-php-kolom-database-dengan-php">
+                            12. penjumlahan pada php kolom database dengan php</h2><br />
+                        pertanyaan tidak jelas.<br /><br />penjumlahan: <br />$a + $b<br /><br />atau<br /><br />sum($a)<br /><br />atau<br /><br />count($a)<br /><br />$a, $b = variabel penampung<br />
+                                            <h2 class="ez-toc-section" id="tolong-bantu-cari-donk-pliss-mendadak-jgn-php-ya-saya-sngt-butuh-bantuan-tolong-bagu-ilmu-ya-%e2%80%8b">
+                            13. tolong bantu cari donk pliss mendadak..jgn PHP ya..saya sngt butuh bantuan tolong bagu ilmu ya...​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>No 3</p><p></p><p>a.  [ 5x + 10 ] - 4 = 2</p><p>       5× - 4 = 2 - 10</p><p>       × = - 8</p><p></p><p>b.  [ 3x - 9 ] - x + 5 = 0</p><p>     [ 3x + x ] - 9 + 5 = 0</p><p>       4× 5 = 0 + 9</p><p>       9×  = 9</p><p>       ×    = 9/9</p><p>       ×    = 1</p><p></p><p>No. 4</p><p></p><p>a. [ 3x + 2 ] &lt; 14       b.[ 2x + 1 ] &gt; 5</p><p>    3x &lt; 14 - 2                  2x &gt; 5 - 1</p><p>    3× &lt; 12                       2x &gt; 4</p><p>    x   &lt; 12/3                    x  &gt; 4/2</p><p>    x   &lt; 4                          x  &gt; 2</p><p></p><p> c. [ 2x + 8 ] &lt; x + 3</p><p>       2x - x &lt; 3 - 8</p><p>       2x &lt; - 5</p><p>        x  &lt; -5/2</p><p></p><p>semoga benar</p><br />
+                                            <h2 class="ez-toc-section" id="apakah-kepanjangan-dari-kata-php-dalam-ilmu-matematika">
+                            14. apakah kepanjangan dari kata PHP dalam ilmu matematika?</h2><br />
+                        Pemberi Harapan Palsu<br /> "Personal Home Page Tools". maaf klw salah<br /><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-syntax-php-untuk-menghapus-data-siswa-berdasarkan-id-siswa%e2%80%8b">
+                            15. Tuliskan syntax Php untuk menghapus data siswa berdasarkan ID siswa​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p></p><p>berikut code nya : </p><p></p><p>&lt;?php</p><p>// Koneksi ke database </p><p>$conn = mysqli_connect("localhost", "username", "password", "nama_database");</p><p></p><p>// Menangkap ID siswa yang akan dihapus dari parameter GET </p><p>$id_siswa = $_GET["id"];</p><p></p><p>// Membuat query untuk menghapus data siswa berdasarkan ID </p><p>$query = "DELETE FROM siswa WHERE id_siswa = $id_siswa";</p><p></p><p>// Menjalankan query untuk menghapus data </p><p>if (mysqli_query($conn, $query)) {</p><p>    echo "Data siswa berhasil dihapus";</p><p>} else {</p><p>    echo "Gagal menghapus data siswa: " . mysqli_error($conn);</p><p>}</p><p></p><p>// Menutup koneksi ke database </p><p>mysqli_close($conn);</p><p>?&gt;</p><p></p><p>Penjelasannya :</p><p></p><p>1. Pertama-tama kita melakukan koneksi ke database dengan menggunakan fungsi `mysqli_connect()` . Di sini, kamu harus mengganti "localhost", "username", "password", dan "nama_database" dengan nilai yang sesuai untuk koneksi ke database kita.</p><p></p><p>2. menangkap ID siswa yang akan dihapus dari parameter GET dengan menggunakan variabel `$_GET["id"]`.</p><p></p><p>3. Setelah itu, kita membuat query SQL untuk menghapus data siswa berdasarkan ID menggunakan perintah `DELETE FROM`. Di sini, kita menggunakan variabel `$id_siswa` untuk menggantikan nilai ID siswa yang kita tangkap sebelumnya.</p><p></p><p>4. Kita mengeksekusi query menggunakan fungsi `mysqli_query()`. Jika query berhasil dijalankan, kita akan menampilkan pesan "Data siswa berhasil dihapus". Jika tidak, kita akan menampilkan pesan error menggunakan fungsi `mysqli_error()`.</p><p></p><p>5. Terakhir, kita menutup koneksi ke database menggunakan fungsi 'mysqli_close()'.</p><p></p><p>Sekian semoga membantu</p><p><strong>Jawaban:</strong></p><p><strong></strong></p><p><strong>&lt;?php</strong></p><p><strong></strong></p><p><strong>// koneksi ke database</strong></p><p><strong>$servername = "localhost";</strong></p><p><strong>$username = "username";</strong></p><p><strong>$password = "password";</strong></p><p><strong>$dbname = "myDB";</strong></p><p><strong></strong></p><p><strong>$conn = mysqli_connect($servername, $username, $password, $dbname);</strong></p><p><strong></strong></p><p><strong>// periksa koneksi</strong></p><p><strong>if (!$conn) {</strong></p><p><strong>  die("Koneksi gagal: " . mysqli_connect_error());</strong></p><p><strong>}</strong></p><p><strong></strong></p><p><strong>// ambil ID siswa yang akan dihapus dari parameter URL</strong></p><p><strong>$id = $_GET['id'];</strong></p><p><strong></strong></p><p><strong>// query untuk menghapus data siswa berdasarkan ID siswa</strong></p><p><strong>$sql = "DELETE FROM siswa WHERE id=$id";</strong></p><p><strong></strong></p><p><strong>// eksekusi query</strong></p><p><strong>if (mysqli_query($conn, $sql)) {</strong></p><p><strong>  echo "Data siswa berhasil dihapus";</strong></p><p><strong>} else {</strong></p><p><strong>  echo "Error: " . $sql . "&lt;br&gt;" . mysqli_error($conn);</strong></p><p><strong>}</strong></p><p><strong></strong></p><p><strong>// tutup koneksi</strong></p><p><strong>mysqli_close($conn);</strong></p><p><strong></strong></p><p><strong>?&gt;</strong></p><p></p><p><strong>Penjelasan:</strong></p><p></p>Koneksi ke database diinisialisasi dengan variabel $servername, $username, $password, dan $dbname.Koneksi ke database dilakukan dengan fungsi mysqli_connect().ID siswa yang akan dihapus diambil dari parameter URL dengan variabel $id.Query untuk menghapus data siswa dengan ID $id dibuat dengan variabel $sql.Query dieksekusi dengan fungsi mysqli_query().Jika query berhasil dieksekusi, pesan berhasil dicetak ke layar. Jika tidak, pesan error dicetak ke layar.Koneksi ditutup dengan fungsi mysqli_close().<br />
+                                            <h2 class="ez-toc-section" id="1-cari-dan-rangkum-membuat-database-di-php2-jelaskan-tentang-desain-web-berbasis-sqltolong-bantu-besok-di-kumpulin">
+                            16. 1. cari dan rangkum membuat database di php2. jelaskan tentang desain web berbasis SQLTolong bantu besok di kumpulin</h2><br />
+                        1. pertama aktifkan xampp terlebih dahulu,,jalankan apache dan mysql<br />setelah itu buat file bernama bikin_db.php simpan di xampp/htdocs isi dengan script berikut<br />&lt;?php<br />mysql_connect('localhost','root','');<br />mysql_query('CREATE DATABASE nama_database');<br />?&gt;<br />jalankan di browser http://localhost/bikin_db.php<br />
+                                            <h2 class="ez-toc-section" id="bagamana-cara-membuat-php-dan-apa-fungsi-php">
+                            17. bagamana cara membuat php dan apa fungsi php</h2><br />
+                        ya uda kita cueki aja ( Stay cool) <br />Dasar korban php<br />
+                                            <h2 class="ez-toc-section" id="pada-dasarnya-php-yang-baru-saja-diinstall-dengan-masuk-ke-folder">
+                            18. pada dasarnya, php yang baru saja diinstall dengan masuk ke folder?</h2><br />
+                        <p>Pada dasarnya, <strong>PHP </strong>yang baru saja diinstall dengan masuk ke folder <strong>/usr/share/phpMyAdmin</strong>. Soal tersebut berkaitan dengan materi administrasi sistem jaringan.</p><p></p>Pembahasan<p><strong>PHP </strong>adalah akronim rekursif untuk "<strong>PHP</strong>: Hypertext Preprocessor". Ini adalah bahasa skrip sisi server open source yang banyak digunakan dalam pengembangan web. Skrip <strong>PHP </strong>dieksekusi di server dan dapat disematkan ke dalam kode HTML. Dengan asumsi telah menginstal phpMyAdmin, untuk mengaksesnya pergi ke folder <strong>/usr/share/phpMyAdmin</strong>. Di folder itu, klik dua kali pada file bernama "index.php." Sebuah jendela baru akan terbuka di browser web default dan akan dapat menggunakan phpMyAdmin.</p><p>Jika karena alasan tertentu tidak dapat mengakses phpMyAdmin atau tidak berfungsi dengan baik, pastikan <strong>PHP </strong>telah terinstal di komputer . dapat memeriksa apakah <strong>PHP </strong>sudah terinstal dengan masuk ke baris perintah dan mengetik "php -v." Jika <strong>PHP </strong>diinstal, lalu akan melihat respons dengan nomor versi. Jika tidak perlu menginstal <strong>PHP </strong>sebelum menggunakan phpMyAdmin.</p><p></p>Pelajari lebih lanjut<p>Pelajari lebih lanjut tentang perbedaan php mysql dengan php mysqli: https://brainly.co.id/tugas/8392091</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ4</strong></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            19. apa yang dimaksud dengan php</h2><br />
+                        Pemberi harapan palsu<br /><br /><br />Klo gk salahPemberi harapan palsu(php)<br />
+                                            <h2 class="ez-toc-section" id="1-ada-berapa-versi-php2-apakah-php-adalah-sebuah-bahasa-pemrograman-oop-jelaskan-pendapat-kalian">
+                            20. 1. Ada berapa versi PHP?
+2. Apakah PHP adalah sebuah bahasa pemrograman OOP? Jelaskan pendapat kalian.</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. PHP versi terbaru ada di PHP 7</p><p></p><p>2. PHP bisa menggunakan pemrograman berbasis objek (OOP)</p><p></p><p><strong>Penjelasan:</strong></p><p></p><p>berikut adalah perkembangan versi PHP</p><p></p><p>1. PHP 1.0 </p><p>versi ini adalah versi pertama dari bahasa PHP. dibuat oleh Rasmus Lerdoft pada tahun 1995.</p><p></p><p>2. PHP 2.0</p><p>versi ini dirilis pada November 1997. versi ini merupakan cikal bakal PHP 3.0</p><p></p><p>3. PHP 3.0</p><p>dirilis pada sekitar Juni 1998. PHP ditulis ulang oleh perusahaan bernama Zein. Penulisan ulang ini meliputi pembersihan interpreter PHP. nama versi ini diresmikan menjadi PHP 3.0</p><p></p><p>4. PHP 4.0</p><p>dirilis pada pertengahan tahun 1999 dan pembaruan interpreter. rilis ini dikenal dengan PHP 4.0</p><p></p><p>5. PHP 5.0</p><p>dirilis pada juni 2004. pada versi ini, PHP mulai menambahkan versi OOP</p><p></p><p>6. PHP 6.0</p><p>bisa dibilang versi gagal dari PHP. dirilis sekitar 2005. fitur² yang seharusnya ada di PHP 6.0, dialihkan ke PHP 5.0</p><p></p><p>7. PHP 7.0</p><p>mulai dikembangkan pada tahun 2014. dunia programming dibingungkan oleh update ini, apakah disebut PHP 7 atau PHP 6. setelah melalui voting, akhirnya penamaan versi ini adalah PHP 7.0</p><p></p><p>===============================================</p><p><strong>S</strong><strong>e</strong><strong>m</strong><strong>o</strong><strong>g</strong><strong>a</strong><strong> </strong><strong>M</strong><strong>e</strong><strong>m</strong><strong>b</strong><strong>a</strong><strong>n</strong><strong>t</strong><strong>u</strong></p><p><strong>J</strong><strong>a</strong><strong>d</strong><strong>i</strong><strong>k</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>J</strong><strong>a</strong><strong>w</strong><strong>a</strong><strong>b</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>t</strong><strong>e</strong><strong>r</strong><strong>b</strong><strong>a</strong><strong>i</strong><strong>k</strong><strong> </strong><strong>y</strong><strong>a</strong></p><p><strong>#</strong><strong>B</strong><strong>e</strong><strong>l</strong><strong>a</strong><strong>j</strong><strong>a</strong><strong>r</strong><strong>B</strong><strong>e</strong><strong>r</strong><strong>s</strong><strong>a</strong><strong>m</strong><strong>a</strong><strong>B</strong><strong>r</strong><strong>a</strong><strong>i</strong><strong>n</strong><strong>l</strong><strong>y</strong></p><br />
+                                            <h2 class="ez-toc-section" id="cari-keunggulankelebihan-html-dan-php-masing-masing-10">
+                            21. cari keunggulan/kelebihan html dan php masing masing 10</h2><br />
+                        Kelebihan PHP<br />1. Bahasa pemrograman PHP adalah sebuah bahasa script yang tidak melakukan sebuah kompilasi dalam penggunaanya.<br />2. Web Server yang mendukung PHP dapat ditemukan dimana – mana dari mulai apache, IIS, Lighttpd, hingga Xitami dengan konfigurasi yang relatif mudah.<br />3. Dalam sisi pengembangan lebih mudah, karena banyaknya milis – milis dan developer yang siap membantu dalam pengembangan.<br />4. Dalam sisi pemahamanan, PHP adalah bahasa scripting yang paling mudah karena memiliki referensi yang banyak.<br />5. PHP adalah bahasa open source yang dapat digunakan di berbagai mesin (Linux, Unix, Macintosh, Windows) dan dapat dijalankan secara runtime melalui console serta juga dapat menjalankan perintah-perintah system.<br />6. Bisa membuat Web menjadi Dinamis.<br />7. PHP bersifat Open Source yang berarti dapat digunakan oleh siapa saja secara gratis.<br />8. Program yang dibuat dengan PHP bisa dijalankan oleh Semua Sistem Operasi karena PHP berjalan secara Web Base yag artinya semua Sistem Operasi bahkan HP yang mempunyai Web Browser dapat menggunakan program PHP.<br />9. Aplikasi PHP lebih cepat dibandingkan dengan ASP maupun Java.<br />10.Mendukung banyak paket Database seperti MySQL, Oracle, PostgrSQL, dan lain-lain.<br /><br /><br />Kelebihan HTML<br />1. Merupakan bahasa penkodean yang lintas platform (cross platform), maksudnya HTML dapat digunakan pada berbagai jenis mesin komputer yang berbeda dan berbagai macam sistem operasi yang berbeda. Jadi bersifat fleksibel karena ditulis cukup dengan menggunakan editor karakter ASCII.<br />2. Dapat disisipi gambar baik gambar statis atau dinamis (animasi) termasuk menggunakan gambar untuk dijadikan hyperlink. Gambar di sini digunakan untuk merujuk pada suatu halaman web, dimana setiap titik-titik yang sudah didefinisikan berupa rectangular (kotak), poligon (kurva tak beraturan) atau lingkaran digunakan untuk ‘jump’ ke halaman lain, atau link ke halaman di luar web yang bersangkutan.<br />3. Dapat disisipi animasi berupa Java Applet atau file-file animasi dari Macromedia Flash atau Macromedia Shockwave (untuk keperluan ini, browser harus memiliki plug-in khusus untuk menjalankan file-file animasi ini).<br />4. Dapat disisipi bahasa pemrograman untuk mempercantik halaman web seperti Javascript, VBScript, Active Server Pages, Perl, Tcl, PHP dan sebagainya. Bukan merupakan bahasa pemrograman jadi tidak memerlukan kompiler. Cara menjalanakannya cukup dengan menggunakan browser.<br />5. Dapat ditulis dalam sintaks HTML (dengan tipe media text/HTML) danXML.<br />6. Integrasi yang lebih baik dengan aplikasi situs dan pemrosesannya.<br />7. Integrasi (‘inline’) dengan doctype yang lebih sederhana.<br />8.Penulisan kode yang lebih efisien.<br /> 9. Konten yang ada di situs lebih mudah terindeks oleh search engine.<br />10. Bersifat fleksibel<br />
+                                            <h2 class="ez-toc-section" id="kepanjangan-kata-php">
+                            22. kepanjangan kata php</h2><br />
+                        pemberi harapan palsuPemberi harapan palsu:v<br />
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-php-mysql-dengan-php-mysqli">
+                            23. apa perbedaan php mysql dengan php mysqli ?</h2><br />
+                        Perbedaan Antara mysql extension Dengan mysqli extension
+<p>Sepanjang tutorial PHP MySQL Part 4 sampai 11 di duniailkom ini, kita menggunakan extension mysql dari PHP untuk mengakses MySQL. Fungsi-fungsi yang kita pelajari tersebut (seperti fungsi mysql_connect, mysql_query, dan mysql_fetch_array)
+ memang sudah tidak disarankan lagi, tetapi saya tetap membahasnya 
+sebagai dasar bagi kita untuk masuk ke extension yang lebih baru: mysqli dan PDO.</p>
+<p>Terhitung dari PHP versi 5.5, extension mysql tidak lagi disarankan penggunaannya dan berstatus deprecated, yang berarti mungkin akan dihapus pada PHP versi berikutnya. Kita disarankan untuk mulai beralih menggunakan mysqli atau PDO. Mari kita bahas tentang mysqli terlebih dahulu.</p>
+<p>Mysqli merupakan kependekan dari MySQL Improved Extension. Seperti yang terlihat dari namanya, extension ini merupakan versi perbaikan dan penambahan dari extension mysql sebelumnya yang umum digunakan. Extension mysqli dibuat untuk mendukung fitur-fitur terbaru dari MySQL Server versi 4.1 keatas.</p><br /><br />
+                                            <h2 class="ez-toc-section" id="server-sidescriptingteks-editorweb-broserwebserverjikaphpphpbahasafort-fert-server-sidejelaskan-kebutuhan-untukberdasarkangambar-diacarmelakukon-permogramanscripting-adalah%e2%80%8b">
+                            24. Server SideScriptingTeks EditorWeb BroserwebServerJikaPHPphpBahasafort fert Server sideJelaskan kebutuhan untukberdasarkangambar diacarmelakukon permogramanScripting adalah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>kebutuhan yang pertama ialah text editor dimana kamu akan menegetik perintah php dan format file umumnya .php</p><p>kemudian kamu membutuhkan web browser untuk mengakses web server ke file .php kamu</p><p>dan yang terakhir ialah web server yg berfungsi menjalan kan perintah php </p><p>kesimpulannya :</p><p>1. kamu mengkoding perintah php dan menyimpan file tersebut di server</p><p>2. kamu mengakases web browser untuk mengakses file tersebut melalui web server</p><p>contoh web server local ialah apache</p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-itu-_request-pada-php">
+                            25. apa itu $_REQUEST pada php</h2><br />
+                        artinya itu merespin satu program aplikasi di dlm komputer, termasuk dalam program php... $_REQUEST dalam php ini sangat bermanfaat bagi kita...itu bagian dari php<br />
+                                            <h2 class="ez-toc-section" id="kelebihan-php-apa-saja">
+                            26. kelebihan php apa saja???</h2><br />
+                        <p></p><br /><p>Banyak sekali kelebihan yang dimiliki PHP dibandingkan dengan bahasa pemrograman yang lain, Diantaranya :</p>
+1.Bisa membuat Web menjadi Dinamis.<br />2.PHP bersifat Open Source yang berarti dapat digunakan oleh siapa saja secara gratis.<br />3.Program yang dibuat dengan PHP bisa dijalankan oleh Semua Sistem Operasi
+ karena PHP berjalan secara Web Base yag artinya semua Sistem Operasi 
+bahkan HP yang mempunyai Web Browser dapat menggunakan program PHP.<br />4.Aplikasi PHP lebih cepat dibandingkan dengan ASP maupun Java.<br />5.Mendukung banyak paket Database seperti MySQL, Oracle, PostgrSQL, dan lain-lain.Mendukung banyak paket Database seperti MySQL, Oracle, PostgrSQL, dan lain-lain.<br />6.Bahasa pemrograman PHP tidak memerlukan Kompilasi / Compile dalam penggunaannya<br />7.Banyak Web Server yang mendukung PHP seperti Apache, Lighttpd, IIS dan lain-lain.<br />8.Pengembangan Aplikasi PHP mudah karena banyak Dokumentasi, Refrensi &amp; Developer yang membantu dalam pengembangannya.<br />9.Banyak bertebaran Aplikasi &amp; Program PHP yang Gratis &amp; Siap pakai seperti WordPress, PrestaShop, dan lain-lain.<br /><br />SALAM   :  YOVAN GERALDI CREW DARI IMEN CREW<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />-membuat web menjadi dinamis <br />-PHP bersifat Open Source yang berarti dapat digunakan oleh siapa saja secara gratis <br />-program yang dibuat dengan PHP bisa dijalankan oleh semua sistem operasi karena PHP berjalan secara Web Base yang artinya semua Sistem Operasi bahkan HP yang mempunyai Web Browser dapat menggunakan program PHP <br />-aplikasi PHP lebih cepat dibandingkan dengan ASP maupun Java<br />-mendukung banyak paket Database seperti MySQL,Oracle,PostgrSQL,dll<br />-bahasa program PHP tidak memerlukan Kompilasi/Compile dalam penggunaannya <br />#smoga mmbntu,,,<br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-script-php-pencarian-data-ini-select-from-siswa-where-nama-like-_post-txtnama">
+                            27. Jelaskan Script php pencarian data ini (  select * from siswa where nama like %$_POST ['txtnama']  %</h2><br />
+                        mencari nama siswa yang mengandung kata yang diinput.<br />misal input : blo<br />maka nama2 berikut akan keluar<br />blonjo<br />gooblok<br />blokir<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            28. Apa yang dimaksud dengan php?</h2><br />
+                        PHP adalah bahasa pemrograman yang digunakan secara luas untuk penanganan pembuatan dan pengembangan sebuah situs web dan bisa digunakan bersamaan dengan HTML<br />PHP adalah salah satu bahasa pemrograman tingkat tinggi. Kepanjangan dari PHP adalah Hypertext Pre-processor.<br /><br />PHP banyak digunakan untuk pembuatan website dinamis yang membutuhkan update data setiap saat, dan biasanya juga digabungkan dengan bahasa pemrograman SQL.<br /><br />
+                                            <h2 class="ez-toc-section" id="gimana-caranya-instal-php-di-komputer-katanya-harus-pakai-xampp-ya">
+                            29. gimana caranya instal php di komputer? katanya harus pakai xampp ya?</h2><br />
+                        Sudah tau kok bertanya, tak dicoba tak akan tau, sebenarnya banyak cara menginstall php beserta komponen lain seperti mysql, apache, sql.<br />cara mudah lainnya yaitu menggunakan vertrigoserv pengaturannya mudah dan tinggal setting interface.<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-fungi-dari-tipe-data-array-dan-buat-bentuk-dasar-dari-array-pada-program-php">
+                            30. Jelaskan fungi dari tipe data array dan buat bentuk dasar dari array pada program php </h2><br />
+                        tipe data array atau larik merupakan tipe data yg digunakan untuk menyimpan banyak data dalam satu variable. php ada 3 jenis array: numeric array, associative array, dan multi dimensional array. <br />kode pembuatan: <br />$tuliskode[0]="Hello";<br />$tuliskode[1]="Tuliskode";<br />echo $tuliskode[0]."".$tuliskode[1];<br />
+                                            <h2 class="ez-toc-section" id="cara-membuat-form-php-absensi-yang-kalau-lebih-cari-jam-tertentu-tidak-bisa-di-isi-lagi%e2%80%8b">
+                            31. cara membuat form php absensi yang kalau lebih cari jam tertentu tidak bisa di isi lagi​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>membuat script PHP yang mengambil data jam masuk dan jam keluar dari database, kemudian memeriksa apakah sudah ada entri absensi pada jam tertentu sebelum menampilkan form. Jika sudah ada, maka form tidak akan ditampilkan dan memberikan pesan kepada pengguna bahwa absensi sudah dilakukan. Jika belum ada, maka form akan ditampilkan untuk diisi. Hal ini dapat dilakukan dengan menggunakan perintah SQL SELECT dan COUNT untuk memeriksa apakah sudah ada entri absensi pada jam tertentu.</p><p></p><p><strong>Penjelasan:</strong></p><p>jika sesuai tolong bantu jadikan jawaban tercerdas ya terimakasih sehat selalu</p><br />
+                                            <h2 class="ez-toc-section" id="pada-dasarnya-php-yang-baru-saja-diinstall-dengan-masuk-ke-folder%e2%80%a6">
+                            32. Pada dasarnya, PHP yang baru saja diinstall dengan masuk ke folder…</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>hmmmmmmmmmmmmmmnnmmmmm</p><p><strong>Jawaban:</strong></p><p>/usr/share/phpMyAdmin</p><p><strong>Penjelasan:</strong></p><p>Semoga membantuu...</p><br />
+                                            <h2 class="ez-toc-section" id="apa-kepanjangan-dari-php">
+                            33. Apa kepanjangan dari php </h2><br />
+                        pemberi harapan palsuKepanjangan dari PHP : Pemberi Harapan Palsu<br /><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            34. apa yang dimaksud dengan php?</h2><br />
+                        pemberi harapan palsu<br /><br />(mungkin)<br />pemberi harapan palsu<br /><br /><br />
+                                            <h2 class="ez-toc-section" id="saya-ada-tugas-buat-web-dari-php-tolong-bantu-saya-mengerjakan-tugas-saya-saya-sudah-cari-digoogle-tapi-gak-ketemu-tolong-bantuannya">
+                            35. saya ada tugas buat web dari php. Tolong bantu saya mengerjakan tugas saya.saya sudah cari digoogle tapi gak ketemu. tolong bantuannya</h2><br />
+                        kamu dapet tugas apa? <br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            36. apa yang dimaksud dengan php</h2><br />
+                        PHP adalah singkatan dari "PHP: Hypertext Prepocessor", yaitu bahasa pemrograman yang digunakan secara luas untuk penanganan pembuatan dan pengembangan sebuah situs web dan bisa digunakan bersamaan dengan HTML.<br />
+                                            <h2 class="ez-toc-section" id="apa-itu-php-dan-apa-kegunaan-php">
+                            37. apa itu PHP ? 
+dan apa kegunaan PHP ?</h2><br />
+                        PHP itu pemberi harapan palsu<br />gunaya untuk selingkuh<br />
+                                            <h2 class="ez-toc-section" id="cari-keunggulankelebihan-html-dan-php-masing-masing-10">
+                            38. cari keunggulan/kelebihan html dan php masing masing 10</h2><br />
+                        Kelebihan PHP<br />1. Bahasa pemrograman PHP adalah sebuah bahasa script yang tidak melakukan sebuah kompilasi dalam penggunaanya.<br />2. Web Server yang mendukung PHP dapat ditemukan dimana – mana dari mulai apache, IIS, Lighttpd, hingga Xitami dengan konfigurasi yang relatif mudah.<br />3. Dalam sisi pengembangan lebih mudah, karena banyaknya milis – milis dan developer yang siap membantu dalam pengembangan.<br />4. Dalam sisi pemahamanan, PHP adalah bahasa scripting yang paling mudah karena memiliki referensi yang banyak.<br />5. PHP adalah bahasa open source yang dapat digunakan di berbagai mesin (Linux, Unix, Macintosh, Windows) dan dapat dijalankan secara runtime melalui console serta juga dapat menjalankan perintah-perintah system.<br />6. Bisa membuat Web menjadi Dinamis.<br />7. PHP bersifat Open Source yang berarti dapat digunakan oleh siapa saja secara gratis.<br />8. Program yang dibuat dengan PHP bisa dijalankan oleh Semua Sistem Operasi karena PHP berjalan secara Web Base yag artinya semua Sistem Operasi bahkan HP yang mempunyai Web Browser dapat menggunakan program PHP.<br />9. Aplikasi PHP lebih cepat dibandingkan dengan ASP maupun Java.<br />10.Mendukung banyak paket Database seperti MySQL, Oracle, PostgrSQL, dan lain-lain.<br /><br /><br />Kelebihan HTML<br />1. Merupakan bahasa penkodean yang lintas platform (cross platform), maksudnya HTML dapat digunakan pada berbagai jenis mesin komputer yang berbeda dan berbagai macam sistem operasi yang berbeda. Jadi bersifat fleksibel karena ditulis cukup dengan menggunakan editor karakter ASCII.<br />2. Dapat disisipi gambar baik gambar statis atau dinamis (animasi) termasuk menggunakan gambar untuk dijadikan hyperlink. Gambar di sini digunakan untuk merujuk pada suatu halaman web, dimana setiap titik-titik yang sudah didefinisikan berupa rectangular (kotak), poligon (kurva tak beraturan) atau lingkaran digunakan untuk ‘jump’ ke halaman lain, atau link ke halaman di luar web yang bersangkutan.<br />3. Dapat disisipi animasi berupa Java Applet atau file-file animasi dari Macromedia Flash atau Macromedia Shockwave (untuk keperluan ini, browser harus memiliki plug-in khusus untuk menjalankan file-file animasi ini).<br />4. Dapat disisipi bahasa pemrograman untuk mempercantik halaman web seperti Javascript, VBScript, Active Server Pages, Perl, Tcl, PHP dan sebagainya. Bukan merupakan bahasa pemrograman jadi tidak memerlukan kompiler. Cara menjalanakannya cukup dengan menggunakan browser.<br />5. Dapat ditulis dalam sintaks HTML (dengan tipe media text/HTML) danXML.<br />6. Integrasi yang lebih baik dengan aplikasi situs dan pemrosesannya.<br />7. Integrasi (‘inline’) dengan doctype yang lebih sederhana.<br />8.Penulisan kode yang lebih efisien.<br /> 9. Konten yang ada di situs lebih mudah terindeks oleh search engine.<br />10. Bersifat fleksibel<br />
+                                            <h2 class="ez-toc-section" id="apa-pengertian-dari-php-dalam-pembahasan-pemrograman-dasar%e2%80%8b">
+                            39. Apa pengertian dari PHP dalam pembahasan pemrograman dasar​</h2><br />
+                        Pengertian PHPPHP (Hypertext Preprocessor) adalah bahasa pemrograman yang memungkinkan para pengembang web membuat konten dinamis yang berinteraksi dengan database.Biasanya bahasa pemrograman PHP digunakan untuk membuat web berdasarkan aplikasi perangkat lunak. <p></p>Mengenai PHPProses penerjemahan bahasa pemrograman PHP menggunakan interpreterBiasanya, PHP digunakan bersamaan dengan bahasa pemrograman HTMLProgram PHP diawali oleh &lt;?php dan diakhiri dengan ?&gt; pada akhir pemrograman<br />
+                                            <h2 class="ez-toc-section" id="php-adalah-singkatan-dari">
+                            40. PHP adalah singkatan dari</h2><br />
+                        php: hypertext preprocessor<strong>Hypertext Processor<br /><br /></strong>Semoga Membantu!<strong><br /></strong><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/K_ldbZMOvGA?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>ti</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/chord-and-lirik-lagu-peterpan-yang-terdalam.html">Chord And Lirik Lagu Peterpan Yang Terdalam</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/chord-gitar-lagu-lolot-ngugut-jeriji.html">Chord Gitar Lagu Lolot Ngugut Jeriji</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/kunci-chord-dasar.html">Kunci Chord Dasar</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/chord-lagu-tarada.html">Chord Lagu Tarada</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/kunci-dasar-tak-pernah-padam.html">Kunci Dasar Tak Pernah Padam</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/chord-lagu-kerispatih-tak-mampu-pergi.html">Chord Lagu Kerispatih Tak Mampu Pergi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/chord-gitar-adista-jangan-jauh-dari-hati.html">Chord Gitar Adista Jangan Jauh Dari Hati</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/soal-dan-kunci-materi-dasar-pemetaan-penginderaan-jauh-dan-sig-doc.html">Soal Dan Kunci Materi Dasar Pemetaan Penginderaan Jauh Dan Sig doc</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/chord-dan-lirik-lagu-rohani-ndc-terbesar-dan-termulia.html">Chord Dan Lirik Lagu Rohani Ndc Terbesar Dan Termulia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/kunci-gitar-on-my-way.html">Kunci Gitar On My Way</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/lirik-lagu-goo-goo-dolls-dan-terjemahan.html">Lirik Lagu Goo Goo Dolls Dan Terjemahan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/lirik-lagu-wajib-mengheningkan-cipta.html">Lirik Lagu Wajib Mengheningkan Cipta</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/kunci-lagu-aku-rindu-padamu-evie-tamala.html">Kunci Lagu Aku Rindu Padamu Evie Tamala</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/lirik-lagu-dari-mata-jaz-hayat.html">Lirik Lagu Dari Mata Jaz Hayat</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/kunci-gitar-iwan-fals-kumenanti-seorang-kekasih.html">Kunci Gitar Iwan Fals Kumenanti Seorang Kekasih</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/lirik-lagu-besar-allahku-beserta-bahasa-inggris.html">Lirik Lagu Besar Allahku Beserta Bahasa Inggris</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/umar-bakri-chord-gitar.html">Umar Bakri Chord Gitar</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/lirik-lagu-abang-becak.html">Lirik Lagu Abang Becak</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/lirik-lagu-untuk-apa-tubuh-yang-indah.html">Lirik Lagu Untuk Apa Tubuh Yang Indah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://zonamusik.github.io/chord-gitar-aku-dan-kenangan-second-civil.html">Chord Gitar Aku Dan Kenangan Second Civil</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://zonamusik.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://zonamusik.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://zonamusik.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://zonamusik.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://zonamusik.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
